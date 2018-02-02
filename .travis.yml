@@ -21,7 +21,7 @@ after_success:
 - git add --all .
 - git commit -m "Travis CI Auto Builder"
 # 这里的 REPO_TOKEN 即之前在 travis 项目的环境变量里添加的
-- git push --quiet --force https://$REPO_TOKEN@github.com/Godi13/Godi13.github.io.git master
+- git push --quiet --force https://$REPO_TOKEN@github.com/jiamicu/jiamicu.github.io master
 env:
   global:
     secure: eJlKsQAt4h9w9jmXcwRfkqLeL7Ip5wqB369jIk+ljbEGp28q0jBWWEQy2jHKu5g0mcwIpi+rb8orBCZgcAAGwOI0ZXpjMU+YHsLoiHOr+RS2V51oURS63avzpUUnLwEX2y8kaHHx8kj5pTsZsI2YppI+WR73yNORZY+Odgq860deyUrqZMb7t6PkD7BfbUiGlGyGuCfeskMuJ3RsPMePE5ECUwB2a71NSMOIRv4urqg6GYe+SUNJqpIfnS+8ulTfQPQdB0eDI/eQfY+VwsP4+ejZRw13VzigC0xincTg6B3gIX9AOj8z0HrPxmu4TxCQb/nWp9stlAoYtlAaOQdH+YzzbGF2CYte0UcXq7R1kwgP9rN783GxuaZ5Hhczyj0ZkT4ss6RceK15KxX09+5IpxY0yyorl2EdMa4JYtWLkkTyjFxK76PUX9ZFey255ulRrU1cIgGt25r67pF8Px+vVxYqwVVH6BQh6W7f5qoXAPxBCgpFPPxg+bA2Zeam5Ff3CX9Fgm4hCj4m5D3HMwC6c9xeUw/i6f6ih9f9PNsIFjUc5e5m/a2g86nbLwa8G1l3t+inVdL6LiKqbE4l9xvauJp0eCAwRWHO49QiF7Yi486mDSNP2P0u79PkFccwlA2Jfc3CG8GzOXRjKZUZFYEwT1JhP8Cm4aicisPoeN1mxF0=
