@@ -1,0 +1,21 @@
+language: node_js
+branches:
+  only:
+  - master
+before_install:
+- npm install -g hexo
+- npm install -g hexo-cli
+before_script:
+- git config --global user.name 'jiamicu'
+- git config --global user.email 'jamic-sai@qq.com'
+- sed -i'' "s~git@github.com:jiamicu/jiamicu.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/jiamicu/jiamicu.github.io.git~" _config.yml
+install:
+- npm install
+script:
+- hexo clean
+- hexo generate
+after_success:
+- hexo deploy
+env:
+  global:
+    secure: eJlKsQAt4h9w9jmXcwRfkqLeL7Ip5wqB369jIk+ljbEGp28q0jBWWEQy2jHKu5g0mcwIpi+rb8orBCZgcAAGwOI0ZXpjMU+YHsLoiHOr+RS2V51oURS63avzpUUnLwEX2y8kaHHx8kj5pTsZsI2YppI+WR73yNORZY+Odgq860deyUrqZMb7t6PkD7BfbUiGlGyGuCfeskMuJ3RsPMePE5ECUwB2a71NSMOIRv4urqg6GYe+SUNJqpIfnS+8ulTfQPQdB0eDI/eQfY+VwsP4+ejZRw13VzigC0xincTg6B3gIX9AOj8z0HrPxmu4TxCQb/nWp9stlAoYtlAaOQdH+YzzbGF2CYte0UcXq7R1kwgP9rN783GxuaZ5Hhczyj0ZkT4ss6RceK15KxX09+5IpxY0yyorl2EdMa4JYtWLkkTyjFxK76PUX9ZFey255ulRrU1cIgGt25r67pF8Px+vVxYqwVVH6BQh6W7f5qoXAPxBCgpFPPxg+bA2Zeam5Ff3CX9Fgm4hCj4m5D3HMwC6c9xeUw/i6f6ih9f9PNsIFjUc5e5m/a2g86nbLwa8G1l3t+inVdL6LiKqbE4l9xvauJp0eCAwRWHO49QiF7Yi486mDSNP2P0u79PkFccwlA2Jfc3CG8GzOXRjKZUZFYEwT1JhP8Cm4aicisPoeN1mxF0=
